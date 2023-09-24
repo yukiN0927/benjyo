@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  background-color: white;
+  animation: change-color-anim 20s linear infinite;
+}
+
+@keyframes change-color-anim {
+  0%,
+  100% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgb(100, 100, 100);
+  }
+}
+
+.kai-img {
+  height: 100%;
+  animation: anim 1s forwards;
+  user-select: none;
+}
+@keyframes anim {
+  0% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+.kai-prof-img {
+  margin-left: 20%;
+  margin-top: 10%;
+  opacity: 1;
+  height: 50%;
+  position: absolute;
+  animation: anime 4s forwards;
+  user-select: none;
+}
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

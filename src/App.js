@@ -10,7 +10,7 @@ function App() {
     <>
       {page === "Top" && <TopPage setPage={setPage} />}
       {page === "Momonga" && <MomongaPage />}
-      {page === "Kai" && <KaiPage />}
+      {page === "Kai" && <KaiPage setPage={setPage} />}
       {page === "Asari" && <AsariPage />}
     </>
   );
