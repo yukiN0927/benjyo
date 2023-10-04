@@ -5,6 +5,7 @@ import KaiProf from "../image/KaiProf.jpg";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import IconButton from "@mui/material/IconButton";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import YouTube from "react-youtube";
 
 function KaiPage(props) {
   // props
@@ -61,7 +62,7 @@ function KaiPage(props) {
         style={{
           position: "absolute",
           marginTop: windowDimensions.height / 2,
-          marginLeft: windowDimensions.width - windowDimensions.width / 13,
+          marginLeft: windowDimensions.width - windowDimensions.width / 10,
         }}
       >
         <IconButton
@@ -78,6 +79,15 @@ function KaiPage(props) {
       <img src={Kai} alt="Kai" className="kai-img" />
       {/** キャラ紹介テキスト画像 */}
       <img src={KaiProf} alt="Kai" className="kai-prof-img" />
+      <div className="youtube" style={{ maxWidth: "10%" }}>
+        <YouTube
+          videoId="QOi-DG0ygVY"
+          opts={{
+            height: windowDimensions.height / 5,
+            width: windowDimensions.width / 5,
+          }}
+        ></YouTube>
+      </div>
     </div>
   );
 }
