@@ -25,6 +25,13 @@ function TopPage(props) {
       >
         Kai
       </button>
+      <button
+        onClick={() => {
+          setPage("Favorite");
+        }}
+      >
+        Favorite
+      </button>
     </div>
   );
 }
