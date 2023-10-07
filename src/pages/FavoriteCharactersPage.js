@@ -31,24 +31,31 @@ function FavoriteCharactersPage(props) {
   /** props */
   const { setPage } = props;
   /** state */
+  // ページで表示するキャラとお気に入りランキング数字データ
   const [favoriteCharacter, setFavoriteCharacter] = useState([]);
+  // EditDialogの表示コントロール
   const [editDialogOpen, setEditDialogOpen] = useState(false);
 
+  // dialog内のselectのvalue(kai)
   const [kaiOneFavorite, setKaiOneFavorite] = useState("");
   const [kaiTwoFavorite, setKaiTwoFavorite] = useState("");
   const [kaiThreeFavorite, setKaiThreeFavorite] = useState("");
 
+  // dialog内のselectのvalue(Asari)
   const [asariOneFavorite, setAsariOneFavorite] = useState("");
   const [asariTwoFavorite, setAsariTwoFavorite] = useState("");
   const [asariThreeFavorite, setAsariThreeFavorite] = useState("");
 
+  // dialog内のselectのvalue(Momonga)
   const [momongaOneFavorite, setMomongaOneFavorite] = useState("");
   const [momongaTwoFavorite, setMomongaTwoFavorite] = useState("");
   const [MenuItemomongaThreeFavorite, setMomongaThreeFavorite] = useState("");
 
-  /** 編集時 */
+  /** DialogのSelectを変更したときの処理 */
   const HandleCharaChange = (name, character, number, setData) => {
+    // 今のお気に入りデータをcopy
     let temp = favoriteCharacter;
+    // 変更された場所を検知してデータを更新する
     temp.map((data) => {
       if (data.name === name && data.number === number) {
         data.character = character;
@@ -56,11 +63,13 @@ function FavoriteCharactersPage(props) {
       }
       return data;
     });
+    // useStateにset
     setFavoriteCharacter(temp);
   };
 
   /** ページ起動時にEdit dialogに登録済みデータを表示する用 */
   const viewSelectData = () => {
+    // 各Selectにvalueをsetする
     if (favoriteCharacter) {
       let temp = favoriteCharacter;
       temp.map((data) => {
