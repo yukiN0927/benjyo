@@ -386,6 +386,7 @@ function FavoriteCharactersPage(props) {
       {/** Bottom  *****************************************/}
       <div style={{ display: "flex" }}>
         <div style={{ width: "-webkit-fill-available" }}>
+          Kai
           {favoriteCharacter &&
             favoriteCharacter.map((data) => {
               return (
@@ -401,6 +402,7 @@ function FavoriteCharactersPage(props) {
             })}
         </div>
         <div style={{ width: "-webkit-fill-available" }}>
+          Asari
           {favoriteCharacter &&
             favoriteCharacter.map((data) => {
               return (
@@ -416,6 +418,7 @@ function FavoriteCharactersPage(props) {
             })}
         </div>
         <div style={{ width: "-webkit-fill-available" }}>
+          Momonga
           {favoriteCharacter &&
             favoriteCharacter.map((data) => {
               return (

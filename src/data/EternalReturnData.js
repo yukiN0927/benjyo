@@ -63,6 +63,7 @@ const character = [
   "テオドール",
   "イアン",
   "ヴァーニャ",
+  "アビゲイル",
 ];
 
 export default character;
