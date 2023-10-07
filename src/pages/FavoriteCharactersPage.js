@@ -21,7 +21,8 @@ import {
 import HomeIcon from "@mui/icons-material/Home";
 import ConstructionIcon from "@mui/icons-material/Construction";
 /** fetch */
-import getFavoriteCharacters from "../api/fetch";
+import { getFavoriteCharacters, updateFavoriteCharacters } from "../api/fetch";
+
 /** data */
 import character from "../data/EternalReturnData";
 
@@ -58,6 +59,7 @@ function FavoriteCharactersPage(props) {
     setFavoriteCharacter(temp);
   };
 
+  /** ページ起動時にEdit dialogに登録済みデータを表示する用 */
   const viewSelectData = () => {
     if (favoriteCharacter) {
       let temp = favoriteCharacter;
@@ -113,84 +115,223 @@ function FavoriteCharactersPage(props) {
           {"お気に入りキャラ編集"}
         </DialogTitle>
         <DialogContent>
-          <div style={{ width: "-webkit-fill-available" }}>
-            {/** Kai Area  *****************************************/}
-            <p style={{ paddingBottom: 8 }}>Kai</p>
-            <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">1</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={kaiOneFavorite}
-                  onChange={(e) =>
-                    HandleCharaChange(
-                      "Kai",
-                      e.target.value,
-                      1,
-                      setKaiOneFavorite
-                    )
-                  }
-                >
-                  {character.map((data) => {
-                    return <MenuItem value={data}>{data}</MenuItem>;
-                  })}
-                </Select>
-              </FormControl>
-            </Box>
-            <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">2</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={kaiTwoFavorite}
-                  onChange={(e) =>
-                    HandleCharaChange(
-                      "Kai",
-                      e.target.value,
-                      2,
-                      setKaiTwoFavorite
-                    )
-                  }
-                >
-                  {character.map((data) => {
-                    return <MenuItem value={data}>{data}</MenuItem>;
-                  })}
-                </Select>
-              </FormControl>
-            </Box>
-            <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">3</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={kaiThreeFavorite}
-                  onChange={(e) =>
-                    HandleCharaChange(
-                      "Kai",
-                      e.target.value,
-                      3,
-                      setKaiThreeFavorite
-                    )
-                  }
-                >
-                  {character.map((data) => {
-                    return <MenuItem value={data}>{data}</MenuItem>;
-                  })}
-                </Select>
-              </FormControl>
-            </Box>
+          <div style={{ display: "flex" }}>
+            <div style={{ width: "-webkit-fill-available", paddingRight: 40 }}>
+              {/** Kai Area  *****************************************/}
+              <p style={{ paddingBottom: 8 }}>Kai</p>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">1</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={kaiOneFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Kai",
+                        e.target.value,
+                        1,
+                        setKaiOneFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">2</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={kaiTwoFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Kai",
+                        e.target.value,
+                        2,
+                        setKaiTwoFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">3</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={kaiThreeFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Kai",
+                        e.target.value,
+                        3,
+                        setKaiThreeFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            {/** Asari Area  *****************************************/}
+            <div style={{ width: "-webkit-fill-available", paddingRight: 40 }}>
+              <p style={{ paddingBottom: 8 }}>Asari</p>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">1</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={asariOneFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Asari",
+                        e.target.value,
+                        1,
+                        setAsariOneFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">2</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={asariTwoFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Asari",
+                        e.target.value,
+                        2,
+                        setAsariTwoFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">3</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={asariThreeFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Asari",
+                        e.target.value,
+                        3,
+                        setAsariThreeFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            {/** Momonga Area  *****************************************/}
+            <div style={{ width: "-webkit-fill-available", paddingRight: 40 }}>
+              <p style={{ paddingBottom: 8 }}>Momonga</p>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">1</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={momongaOneFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Momonga",
+                        e.target.value,
+                        1,
+                        setMomongaOneFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">2</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={momongaTwoFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Momonga",
+                        e.target.value,
+                        2,
+                        setMomongaTwoFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box sx={{ minWidth: 120, paddingBottom: 8 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">3</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={MenuItemomongaThreeFavorite}
+                    onChange={(e) =>
+                      HandleCharaChange(
+                        "Momonga",
+                        e.target.value,
+                        3,
+                        setMomongaThreeFavorite
+                      )
+                    }
+                  >
+                    {character.map((data) => {
+                      return <MenuItem value={data}>{data}</MenuItem>;
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
           </div>
-          {/** Asari Area  *****************************************/}
-          <div style={{ width: "-webkit-fill-available" }}></div>
-          {/** Momonga Area  *****************************************/}
-          <div style={{ width: "-webkit-fill-available" }}></div>
         </DialogContent>
         <DialogActions>
           <Button
             onClick={() => {
+              updateFavoriteCharacters(favoriteCharacter);
               setEditDialogOpen(false);
             }}
             autoFocus
