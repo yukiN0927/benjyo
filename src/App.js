@@ -5,7 +5,7 @@ import KaiPage from "./pages/KaiPage";
 import AsariPage from "./pages/AsariPage";
 import FavoriteCharactersPage from "./pages/FavoriteCharactersPage";
 import EternalReturnMomongaPage from "./pages/EternalReturnMomogaPage";
-
+import EternalReturnAsariPage from "./pages/EternalReturnAsarierPage";
 function App() {
   const [page, setPage] = useState("Top");
   return (
@@ -14,7 +14,10 @@ function App() {
       {page === "Momonga" && <MomongaPage setPage={setPage} />}
       {page === "EternalReturnMomongaPage" && <EternalReturnMomongaPage />}
       {page === "Kai" && <KaiPage setPage={setPage} />}
-      {page === "Asari" && <AsariPage />}
+      {page === "Asari" && <AsariPage setPage={setPage} />}
+      {page === "EternalReturnAsariPage" && (
+        <EternalReturnAsariPage setPage={setPage} />
+      )}
       {page === "Favorite" && <FavoriteCharactersPage setPage={setPage} />}
     </>
   );
