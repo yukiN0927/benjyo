@@ -8,8 +8,10 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import errogo from "../image/errogo.jpg";
-export default function AsariPage() {
+import EternalReturnLogo from "../image/EternalReturnLogo.jpg";
+import LeagueOfLegendsLogo from "../image/LeagueOfLegendsLogo.jpg";
+function AsariPage(props) {
+  const { setPage } = props;
   return (
     <>
       <div>
@@ -28,12 +30,26 @@ export default function AsariPage() {
         <p>name:asari</p>
         <p>age:19</p>
       </font>
-      <img src={errogo}></img>
+      <img
+        src={EternalReturnLogo}
+        onClick={() => {
+          setPage("EternalReturnAsariPage");
+        }}
+      ></img>
+      <img src={LeagueOfLegendsLogo}></img>
       <p>
-        <Button variant="contained" disableElevation>
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={() => {
+            setPage("Top");
+          }}
+        >
           Top
         </Button>
       </p>
     </>
   );
 }
+
+export default AsariPage;

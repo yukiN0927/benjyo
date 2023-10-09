@@ -6,6 +6,7 @@ import AsariPage from "./pages/AsariPage";
 import FavoriteCharactersPage from "./pages/FavoriteCharactersPage";
 import EternalReturnMomongaPage from "./pages/EternalReturnMomogaPage";
 import LOLMomongaPage from "./pages/LOLMomongaPage";
+import EternalReturnAsariPage from "./pages/EternalReturnAsarierPage";
 function App() {
   const [page, setPage] = useState("Top");
   return (
@@ -17,7 +18,10 @@ function App() {
       {page === "LOLMomongaPage" && <LOLMomongaPage setPage={setPage} />}
       {/**以上モモンガ用ページ＆LOLモモンガ＆ERモモンガ */}
       {page === "Kai" && <KaiPage setPage={setPage} />}
-      {page === "Asari" && <AsariPage />}
+      {page === "Asari" && <AsariPage setPage={setPage} />}
+      {page === "EternalReturnAsariPage" && (
+        <EternalReturnAsariPage setPage={setPage} />
+      )}
       {page === "Favorite" && <FavoriteCharactersPage setPage={setPage} />}
     </>
   );
