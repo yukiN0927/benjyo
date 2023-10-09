@@ -1,4 +1,3 @@
-import { yellow } from "@mui/material/colors";
 import React from "react";
 
 function MomongaPage(props) {
@@ -15,16 +14,25 @@ function MomongaPage(props) {
         <p style={{ fontSize: 40, backgroundColor: "yellow" }}>
           Introduce of game by Momonga
         </p>
-
         <button
+          style={{ fontSize: "15px", color: "Purple", padding: "20px 20px" }}
           onClick={() => {
             setPage("EternalReturnMomongaPage");
           }}
         >
-          eternel return
+          Eternel Return
         </button>
-        <p>LOL</p>
+
+        <button
+          style={{ fontSize: "15px", color: "Purple", padding: "20px 20px" }}
+          onClick={() => {
+            setPage("LOLMomongaPage");
+          }}
+        >
+          LOL
+        </button>
       </div>
+
       <div
         onClick={() => {
           setPage("TopPage");
