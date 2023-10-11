@@ -7,6 +7,7 @@ import FavoriteCharactersPage from "./pages/FavoriteCharactersPage";
 import EternalReturnMomongaPage from "./pages/EternalReturnMomogaPage";
 import LOLMomongaPage from "./pages/LOLMomongaPage";
 import EternalReturnAsariPage from "./pages/EternalReturnAsarierPage";
+import LolAsariPage from "./pages/LolAsariPage";
 function App() {
   const [page, setPage] = useState("Top");
   return (
@@ -23,6 +24,7 @@ function App() {
         <EternalReturnAsariPage setPage={setPage} />
       )}
       {page === "Favorite" && <FavoriteCharactersPage setPage={setPage} />}
+      {page === "LolAsariPage" && <LolAsariPage setPage={setPage} />}
     </>
   );
 }

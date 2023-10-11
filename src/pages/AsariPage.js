@@ -36,7 +36,14 @@ function AsariPage(props) {
           setPage("EternalReturnAsariPage");
         }}
       ></img>
-      <img src={LeagueOfLegendsLogo} width="55" height="38"></img>
+      <img
+        src={LeagueOfLegendsLogo}
+        onClick={() => {
+          setPage("LolAsariPage");
+        }}
+        width="55"
+        height="38"
+      ></img>
       <p>
         <Button
           variant="contained"
