@@ -1,5 +1,4 @@
 import React from "react";
-
 function TopPage(props) {
   const { setPage } = props;
   return (
