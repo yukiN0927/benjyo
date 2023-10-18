@@ -15,7 +15,9 @@ function App() {
       {page === "Top" && <TopPage setPage={setPage} />}
       {/**以下モモンガ用ページ＆LOLモモンガ＆ERモモンガ */}
       {page === "Momonga" && <MomongaPage setPage={setPage} />}
-      {page === "EternalReturnMomongaPage" && <EternalReturnMomongaPage />}
+      {page === "EternalReturnMomongaPage" && (
+        <EternalReturnMomongaPage setPage={setPage} />
+      )}
       {page === "LOLMomongaPage" && <LOLMomongaPage setPage={setPage} />}
       {/**以上モモンガ用ページ＆LOLモモンガ＆ERモモンガ */}
       {page === "Kai" && <KaiPage setPage={setPage} />}
