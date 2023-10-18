@@ -6,7 +6,7 @@ import AsariPage from "./pages/AsariPage";
 import FavoriteCharactersPage from "./pages/FavoriteCharactersPage";
 import EternalReturnMomongaPage from "./pages/EternalReturnMomogaPage";
 import LOLMomongaPage from "./pages/LOLMomongaPage";
-import EternalReturnAsariPage from "./pages/EternalReturnAsarierPage";
+import EternalReturnAsariPage from "./pages/EternalReturnAsariPage";
 import LolAsariPage from "./pages/LolAsariPage";
 function App() {
   const [page, setPage] = useState("Top");
