@@ -1,7 +1,6 @@
 import React from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import ImageERLogo from "../image/EternalReturnLogo.jpg";
-import ImageLOLLogo from "../image/LeagueOfLegendsLogo.jpg";
+import ERLogo from "../image/EternalReturnLogo.jpg";
+import LOLLogo from "../image/LeagueOfLegendsLogo.jpg";
 function MomongaPage(props) {
   const { setPage } = props;
   return (
@@ -17,17 +16,11 @@ function MomongaPage(props) {
           Introduce of game by Momonga
         </p>
         <button
-          src={ImageERLogo}
-          style={{
-            fontSize: "15px",
-            color: "Purple",
-            padding: "20px 20px",
-          }}
           onClick={() => {
             setPage("EternalReturnMomongaPage");
           }}
         >
-          <MenuIcon />
+          <img src={ERLogo} alt="ERIcon" style={{ width: 80, height: 50 }} />
         </button>
 
         <button
@@ -35,7 +28,7 @@ function MomongaPage(props) {
             setPage("LOLMomongaPage");
           }}
         >
-          <img src={ImageLOLLogo} alt="LOL Icon" />
+          <img src={LOLLogo} alt="LOL Icon" style={{ width: 80, height: 50 }} />
         </button>
       </div>
 

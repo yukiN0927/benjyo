@@ -1,6 +1,16 @@
 import React from "react";
-const EternalReturnMomongaPage = () => {
-  return <></>;
-};
-
+function EternalReturnMomongaPage(props) {
+  const { setPage } = props;
+  return (
+    <>
+      <button
+        onClick={() => {
+          setPage("Top");
+        }}
+      >
+        Top
+      </button>
+    </>
+  );
+}
 export default EternalReturnMomongaPage;

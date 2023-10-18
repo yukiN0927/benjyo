@@ -1,6 +1,8 @@
 import React from "react";
 
-const LOLMomongaPage = () => {
+function LOLMomongaPage(props) {
+  const { setPage } = props;
+
   return <></>;
-};
+}
 export default LOLMomongaPage;
