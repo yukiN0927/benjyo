@@ -7,6 +7,7 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import IsolIcon from "../image/IsolIcon.png";
 import IsolItem from "../image/IsolItem.png";
 import IsolRoute from "../image/IsolRoute.png";
@@ -87,6 +88,8 @@ function EternalReturnAsariPage(props) {
         </div>
       </div>
       {/**ここまで序盤アイテム */}
+      <h2>スキルパス</h2>
+      <p>T.Q.W.E</p>
       <h2>特性</h2>
       <div style={{ display: "flex" }}>
         <div style={{ marginRight: "30px" }}>
@@ -129,6 +132,7 @@ function EternalReturnAsariPage(props) {
           ></img>
         </div>
       </div>
+      <h2>後半アイテム</h2>
       <p>
         <Button
           variant="contained"
@@ -140,6 +144,21 @@ function EternalReturnAsariPage(props) {
           Top
         </Button>
       </p>
+      <a href="#top">
+        <ArrowUpwardIcon
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            width: "50",
+            height: "50",
+            backgroundColor: "gray",
+            color: "black",
+          }}
+        >
+          トップへ戻る
+        </ArrowUpwardIcon>
+      </a>
     </>
   );
 }
