@@ -88,6 +88,15 @@ function EternalReturnAsariPage(props) {
         </div>
       </div>
       {/**ここまで序盤アイテム */}
+      <h2>戦術スキル</h2>
+      <div>
+        <p>赤嵐</p>
+        <img
+          src="https://cdn.playeternalreturn.com/2023%2F07%2F19%2F1689693756397-%EB%B6%89%EC%9D%80+%ED%8F%AD%ED%92%8D.png"
+          width="85"
+          height="85"
+        ></img>
+      </div>
       <h2>スキルパス</h2>
       <p>T.Q.W.E</p>
       <h2>特性</h2>
