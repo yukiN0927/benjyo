@@ -133,6 +133,75 @@ function EternalReturnAsariPage(props) {
         </div>
       </div>
       <h2>後半アイテム</h2>
+      <div style={{ display: "flex" }}>
+        <div style={{ marginRight: "10px" }}>
+          <p>ジャッジメント</p>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/117406_%E3%82%B8%E3%83%A3%E3%83%83%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88.png"
+            width="85"
+            height="60"
+          ></img>
+        </div>
+        <div style={{ marginRight: "10px" }}>
+          <p>仙女の降臨</p>
+          <img
+            src="https://cdn.playeternalreturn.com/2023%2F03%2F01%2F1677644078715-Beautiful+Garnment_%EC%84%A0%EB%85%80%EA%B0%95%EB%A6%BC.png"
+            width="85"
+            height="60"
+          ></img>
+        </div>
+        <div style={{ marginRight: "10px" }}>
+          <p>光の証票</p>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/201502_%E5%85%89%E3%81%AE%E8%A8%BC%E7%A5%A8.png"
+            width="85"
+            height="60"
+          ></img>
+        </div>
+        <div style={{ marginRight: "10px" }}>
+          <p>トゲトゲチェーン</p>
+          <img
+            src="https://cdn.playeternalreturn.com/2023%2F04%2F12%2F1681269700506-%5B203511%5D+Chain+of+Thorns_%EC%84%9C%EC%8A%AC+%EA%B0%80%EC%8B%9C+%EC%B2%B4%EC%9D%B8.png"
+            width="85"
+            height="60"
+          ></img>
+        </div>
+        <div style={{ marginRight: "10px" }}>
+          <p>アレキサンドロス</p>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/204504_%E3%82%A2%E3%83%AC%E3%82%AD%E3%82%B5%E3%83%B3%E3%83%89%E3%83%AD%E3%82%B9.png"
+            width="85"
+            height="60"
+          ></img>
+        </div>
+      </div>
+      <h3>必要アイテム</h3>
+      <div style={{ display: "flex" }}>
+        <div>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/401208_%E7%94%9F%E5%91%BD%E3%81%AE%E6%9C%A8.png"
+            width="85"
+            height="60"
+          ></img>
+          ×１
+        </div>
+        <div>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/401209_%E9%9A%95%E7%9F%B3.png"
+            width="85"
+            height="60"
+          ></img>
+          ×２
+        </div>
+        <div>
+          <img
+            src="https://asatamin-eternalreturn.com/wp-content/uploads/items/401403_%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%BC.png"
+            width="85"
+            height="60"
+          ></img>
+          ×２
+        </div>
+      </div>
       <p>
         <Button
           variant="contained"
@@ -155,9 +224,7 @@ function EternalReturnAsariPage(props) {
             backgroundColor: "gray",
             color: "black",
           }}
-        >
-          トップへ戻る
-        </ArrowUpwardIcon>
+        ></ArrowUpwardIcon>
       </a>
     </>
   );
